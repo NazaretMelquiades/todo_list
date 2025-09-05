@@ -1,12 +1,10 @@
 import React from "react";
-// import List from "./List"
+import TodoList from "./TodoList";
 
 const Main = () => {
-  return (
-    <main>
-      Main
-    </main>
-  );
+  return <main>
+    <TodoList></TodoList>
+  </main>;
 };
 
 export default Main;

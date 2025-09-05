@@ -1,5 +1,5 @@
 import React from "react";
-import './Item.css'
+import './TodoItem.css'
 
 const TodoItem = ({ data, remove }) => {
   const { title, description, isDone } = data;
