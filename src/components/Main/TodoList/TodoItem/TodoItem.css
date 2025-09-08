@@ -1,0 +1,75 @@
+/* Container de cada card */
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centra horizontalmente */
+    gap: 0.25rem;
+    /* espacio pequeño entre elementos */
+    padding: 1rem;
+    margin-top: 1rem;
+    height: auto;
+    /* altura automática según contenido */
+    width: 250px;
+    /* ancho reducido */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto hover */
+article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Título de la tarea */
+article h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+
+    /* Tachado si está marcada */
+    &[data-done="true"] {
+        text-decoration: line-through;
+        color: #999;
+    }
+}
+
+/* Descripción */
+article p {
+    margin: 0;
+    color: #555;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* Checkbox centrado debajo de la descripción */
+article input[type="checkbox"] {
+    width: 20px;
+    /* tamaño más pequeño */
+    height: 20px;
+    accent-color: #0077ff;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    /* espacio desde el <p> */
+}
+
+/* Botón de borrar */
+article button {
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.6rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff4d4f;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+article button:hover {
+    background-color: #d9363e;
+}

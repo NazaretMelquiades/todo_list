@@ -1,0 +1,41 @@
+/* Container del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* menos espacio entre inputs */
+    background-color: #ffffff;
+    padding: 1rem;
+    /* menos padding */
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    /* más estrecho */
+    margin: 0 auto 1.5rem auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Labels */
+form label {
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+    color: #333;
+    font-size: 0.95rem;
+    /* un poco más pequeño */
+}
+
+/* Inputs de texto */
+form input[type="text"] {
+    padding: 0.4rem 0.6rem;
+    /* menos alto y ancho */
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    border-color: #0077ff;
+    box-shadow: 0 0 4px rgba(0)
+}

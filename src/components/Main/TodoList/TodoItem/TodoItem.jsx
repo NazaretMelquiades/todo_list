@@ -5,7 +5,7 @@ const TodoItem = ({ data, remove, toggleDone }) => {
   const { title, description, isDone } = data;
 
   return <article>
-    <h4>{title}</h4>
+    <h4 data-done={isDone}>{title}</h4>
     <p>{description}</p>
     <label htmlFor="done">Terminado:</label>
     <input id="done" type="checkbox" checked={isDone} onChange={toggleDone} />
