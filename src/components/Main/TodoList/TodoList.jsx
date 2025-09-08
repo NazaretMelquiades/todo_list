@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import TodoItem from './TodoItem';
 import data from './data.js';
@@ -17,8 +17,20 @@ const TodoList = () => {
 
   const [message, setMessage] = useState("");
 
+  const paintData = () =>
+    items.map((item, index) =>
+      <TodoItem
+        data={item}
+        remove={() => removeItem(index)}
+        toggleDone={() => toggleDone(index)}
+        key={uuidv4()} />)
 
-  const paintData = () => items.map((item, index) => <TodoItem data={item} remove={() => removeItem(index)} key={uuidv4()} />)
+  const toggleDone = (i) => {
+    const updatedItems = items.map((item, index) =>
+      index === i ? { ...item, isDone: !item.isDone } : item
+    );
+    setItems(updatedItems);
+  };
 
   const addItem = (new_item) => setItems([...items, new_item]);
   const removeAllItems = () => setItems([]);//decirle que no haya nada en el array
